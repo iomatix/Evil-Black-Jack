@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+
+
+
+
+  <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Demonology">
+    <meta name="author" content="MW">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Daemo-Logy</title>
+	
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/_Main.css" rel="stylesheet">
+  </head>
+
+  
+  
+  <!-- body -->
+  
+  <body class="text-center">
+  
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+	<!--  header --> 
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Daemo-Logy</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="Start.html">Start</a>
+            <a class="nav-link" href="Album.html">Album</a>
+			<a class="nav-link active" href="Game.html">Game</a>
+            <a class="nav-link" href="Info.html">Info</a>
+          </nav>
+        </div>
+</header>
+
+	  <!-- main -->
+      <main role="main" class="inner cover">
+        
+		<!-- interface 1 -->
+		<div class="iFace1">
+		<p class="lead"><h1 class="cover-heading"><b id="demonstyle"> The Evil's Blackjack</b></h1></p>
+	    <p class="lead">
+		<img src="img/Demon4.jpg"  id="Main-img"  class="img-fluid" alt="Responsive Demon">
+		</p>
+		<p class="lead">
+ <button class="btn btn-lg btn-secondary START_B" onmouseenter="Launch()" onmouseleave="NLaunch()" >START</button> 
+		</p>
+		<p class="lead ">Invite  <b id="demonstyle">the Evil</b></p>
+		</div>
+		
+		
+				    <!-- WHAT'S YOUR NAME? -->
+				<div class="iFaceNAME" style="display:none"> 	
+    <div class="modal fade" id="modalNameForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		            <div class="modal-dialog" role="document">
+					<div class="modal-content">
+					 <div class="modal-header text-center">
+					 <h4 class="modal-title w-100 font-weight-bold">Tell me your name...</h4>
+					 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					 <span aria-hidden="true">&times;</span>
+					 </button>
+					</div>
+					<div class="modal-body mx-3">
+					 <div class="md-form mb-5">
+					   <i class="Name fas prefix grey-text"> </i>
+					   <input type="text" value="Player" id="NameForm" class="form-control validate">
+					   <br>
+   <label data-error="Something's gone wrong" data-success="Let's begine" for="form3">Evil is watching</label>
+					   <br>
+					 </div>
+					 </div>
+					 <div id="pentacle">
+					 <img class="card-img-top" id="Main-img" src="textures/_pentacle.jpg"></img>
+					 </div>
+					 <div class="pledge">					 
+<b id="demonstyle-small-nb">I have read and understood the game rules and <br></b>
+<b id="demonstyle-nb">I am aware that if I lose my soul will be taken by The Evil One.</b></br>
+<b id="demonstyle-vsmall-nb">The Evil One is not obligated to fulfil with the wish the obvious way, will decide how to do it by oneself.</b> 
+					       <div class="modal-footer d-flex justify-content-center">
+<button  class="btn btn-sm btn-outline-secondary Name_CONF" data-dismiss="modal" >Accept<i class="Name fas fa-paper-plane-o ml-1"></i></button>
+							</div>
+							</div>
+					</div>
+					</div>
+					</div>
+					
+		    <a  class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#modalNameForm">Enter Name</a>
+		       </div>
+		
+		<!-- interface 2 -->
+		<div class="iFace2" style="display:none"> 
+
+		
+		
+		
+		<p class="lead"><h1 class="cover-heading"><b id="demonstyle"> The Evil's Blackjack</b></h1></p><br>
+		<!-- SCORE -->
+		<div class="Score">
+		<div class="Score-inline">
+		<b id="demonstyle-small"><span id="PlayerScore">The Player: 0</span></b> 
+			</div> 
+        <div class="Score-inline">		
+		<b id="demonstyle-small"><span id="EvilScore">The Evil One: 0</span></b>
+		</div> 
+			</div> 
+		<br class="clearBoth" />
+		<br><br>
+		<!-- TURN -->
+		<div class="Turn">
+		<b id="demonstyle-small"><span id="Turn">Turn of the </span> </b>
+		
+		</div>
+		
+		<!-- TABLE -->
+		<div class = "row text-center" style="">
+        <div class="col-xs-6 text-center" style="background-color:none; margin-top:10px;">
+		<div class="Table">
+		<img src="img/Demon3.jpg"  id="Main-img"  class="img-fluid" alt="Responsive Demon">
+		<br><br>
+		<img src="textures/dice_NONE.png"  id="die1-img"  class="img-plus" alt="Responsive Demon">
+		<img src="textures/dice_NONE.png"  id="die2-img"  class="img-plus" alt="Responsive Demon">
+		</div>
+		</div>
+		
+		
+		
+		</div>
+		<!-- Game Buttons -->
+		<br><br>
+		 <a  id="Roll" class="btn btn-sm btn-outline-secondary" >Roll</a>
+		 <a  id="Pass" class="btn btn-sm btn-outline-secondary" >Pass</a>
+		 <a   id="NextRound" style="display:none" class="btn btn-sm btn-outline-secondary" >Next Round</a>
+		 <a   id="RollEvil" style="display:none" class="btn btn-sm btn-outline-secondary" >Watch Evil</a>
+		<!-- Throw Points -->
+		<br><br>
+		<div class="Points">
+		<div class="Score-inline">	
+		<b id="demonstyle-small"><span id="PlayerPoints">The Player: 0</span></b> 
+		</div> 
+        <div class="Score-inline">		
+		<b id="demonstyle-small"><span id="EvilPoints">The Evil One: 0</span></b>
+		</div> 
+		
+		</div>
+		
+		
+		
+		
+		</div>
+		<!-- interface 3 -->
+		<!-- Wish -->
+<div class="modal fade" id="modalWishForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		            <div class="modal-dialog" role="document">
+					<div class="modal-content">
+					 <div class="modal-header text-center">
+					 <h4 class="modal-title w-100 font-weight-bold">Tell me your wish now...</h4>
+					 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					 <span aria-hidden="true">&times;</span>
+					 </button>
+					</div>
+					<div class="modal-body mx-3">
+					 <div class="md-form mb-5">
+					   <i class="Wish fas prefix grey-text"> </i>
+					   <input type="text" id="WishForm" class="form-control validate">
+					   <br>
+ <label data-error="Something's gone wrong" data-success="I will" for="form3">You have won!</label>
+					 </div>
+					 </div>
+					 					  <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Ask</button>
+                          </div>  
+					</div>
+					</div>
+					</div>
+         
+		 
+		 
+		 
+		 					  <div class="modal" id="modalSoulForm" tabindex="-1" role="dialog">
+					  <div class="modal-dialog" role="document">
+					       <div class="modal-content">
+                           <div class="modal-body">
+					  <b id="demonstyle-small"> Thank you for the game. I will take your soul now... </b>
+					  </div>
+					  <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Okay</button>
+                          </div>  
+					  </div>
+					  </div>
+					  </div>
+		 
+		 
+		 
+		            
+      
+        
+		
+		
+		
+		
+		
+		
+        
+      </main>
+	        <br><br>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p><b id="demonstyle">Demons</b> for <a href="Start.html">Daemo-Logy</a> by 
+		  <a href="https://www.twitch.tv/iomatix">iomatix</a>.</p>
+        </div>
+      </footer>
+    </div>
+
+
+
+
+  </body>
+  
+  
+  
+    <!-- scripts -->
+	<script>
+	function Launch(){
+	$('#Main-img').attr('src',"img/Demon0.gif");
+}
+function NLaunch(){
+	 $('#Main-img').attr('src',"img/Demon4.jpg");
+}
+
+	<!-- iFace1 -->
+     			$(".START_B").click(function()
+					 {
+					 $(".iFace1").hide();
+					 $(".iFaceNAME").show();
+					 
+				
+					 });
+					 
+					
+					/* GLOBALS */
+					var audioRoll = new Audio('mp3/Dice_Throw.mp3');
+					var audioLaugh = new Audio('mp3/Laugh.mp3');
+					var audioAngry = new Audio('mp3/Angry.mp3');
+					
+					var Name="Player";
+					var ScorePlayer=0;
+					var ScoreEvil=0;
+					
+					
+					var Wish="?";
+					var PointsSumPlayer=0;
+					var PointsSumEvil=0;
+					
+					var Dice1=0;
+					var Dice2=0;
+					<!-- name form -->
+					$(".Name_CONF").click(function()
+					 {
+				
+					 $(".iFaceNAME").hide();
+					  $(".iFace2").show();
+					  
+					  
+					 Name = document.getElementById('NameForm').value;
+					 if(!Name) { Name = "Player";}
+					  
+				      $("#Turn").text("Turn of the "+Name);
+					  $("#PlayerScore").text(Name+" : "+ScorePlayer);
+					  $("#PlayerPoints").text(Name+" : "+PointsSumPlayer);
+					 });
+					 
+					 
+					 
+					 	 <!-- iFace 2 -->
+						 
+			                <!-- Roll -->
+					$("#Roll").click(function()
+					 {
+					 $("#Roll").hide();
+					 $("#Pass").hide();
+					 
+					 
+					  if(PointsSumPlayer >= 13)
+					  {
+					   audioRoll.play();
+					   Dice1 = 0;
+					   Dice2 = Math.floor(Math.random() * (6-1))+1; 
+					   PointsSumPlayer = PointsSumPlayer + Dice1+Dice2;
+                       $('#die1-img').attr('src',"textures/dice_NONE.png");
+					   $('#die2-img').attr('src',"textures/dice_"+Dice2+".png");
+					   
+					  }else
+					  {
+					   audioRoll.play();
+					   Dice1 = Math.floor(Math.random() * (6-1))+1; 
+					   Dice2 = Math.floor(Math.random() * (6-1))+1; 
+					   PointsSumPlayer = PointsSumPlayer + Dice1+Dice2;
+					   $('#die1-img').attr('src',"textures/dice_"+Dice1+".png");
+					   $('#die2-img').attr('src',"textures/dice_"+Dice2+".png");
+					   
+					   
+					   
+					  }
+					  
+					     <!-- Points checking -->
+						 
+						 
+						 $("#PlayerPoints").text(Name+" : "+PointsSumPlayer);
+					    if(PointsSumPlayer < 21)
+						{
+				        $("#Roll").show();
+					    $("#Pass").show();
+						}
+						 
+						<!-- LOSE/EVIL TURN -->
+						else if(PointsSumPlayer == 21) 
+						{ 
+						
+                        $("#RollEvil").show();
+						$("#Turn").text("Turn of the Evil One");
+						}else{
+						<!--  Player > 21 -->
+						LostRound();
+						
+						}
+						 
+						 
+					 
+					 });
+				     $("#Pass").click(function()
+					 {
+					 $("#Roll").hide();
+					 $("#Pass").hide();
+					 $("#RollEvil").show();
+					 $("#Turn").text("Turn of the Evil One");
+					  
+					    
+						 
+						 
+						 
+					 
+					 });
+					 
+					 
+					 
+					 <!-- AI Behav Tree-->
+					 
+					 function  evilturn()
+					 {
+					   <!-- DEBUG --> 
+			  if((PointsSumEvil < 18 && PointsSumEvil <= PointsSumPlayer) || PointsSumEvil < PointsSumPlayer)
+					 {
+					  if(PointsSumEvil >= 13)
+					  {
+					   audioRoll.play();
+					   Dice1 = Math.floor(Math.random() * (6-1))+1; 
+					   Dice2 = Math.floor(Math.random() * (6-1))+1; 
+					   PointsSumEvil = PointsSumEvil+Dice2;
+					   <!-- Evil is EVIL! -->
+					   if(Dice1 > 4 && PointsSumEvil > 21)
+					   {
+					   Dice2 = PointsSumEvil-21;
+					   PointsSumEvil=21;
+					   }
+					   
+                       $('#die1-img').attr('src',"textures/dice_NONE.png");
+					   $('#die2-img').attr('src',"textures/dice_"+Dice2+".png");
+					   
+					   
+					   
+					  }else
+					  {
+					   audioRoll.play();
+					   Dice1 = Math.floor(Math.random() * (6-1))+1; 
+					   Dice2 = Math.floor(Math.random() * (6-1))+1; 
+					   PointsSumEvil = PointsSumEvil + Dice1+Dice2;
+					   $('#die1-img').attr('src',"textures/dice_"+Dice1+".png");
+					   $('#die2-img').attr('src',"textures/dice_"+Dice2+".png");
+					  
+					   
+					   
+					  }
+					  
+					  $("#EvilPoints").text("The Evil One: "+PointsSumEvil);
+					  setTimeout(evilturn,1850);
+					 }else{
+					 if(PointsSumEvil == PointsSumPlayer)
+					 {
+					  DrawRound();
+					 }else if(PointsSumEvil < PointsSumPlayer || PointsSumEvil > 21)
+					 {
+					 WinRound();
+					 }else
+					 {
+					 LostRound();
+					 }
+					 
+					 }
+					 
+					 }
+					   
+					   $("#RollEvil").click(function()
+					  {
+					    $("#RollEvil").hide();
+                        evilturn();
+					 
+					  });
+					 <!-- Next round -->
+                  
+				     $("#NextRound").click(function()
+					 {
+					 
+					 if(ScorePlayer >= 3) 
+					 {
+					 ScorePlayer=0;
+					 ScoreEvil=0;
+					 <!-- WISH -->
+					 MakeWish();
+					 
+					 }else if(ScoreEvil  >= 3)
+					 {
+					 ScorePlayer=0;
+					 ScoreEvil=0;
+					 <!-- SOUL -->
+					 Soul();
+					 
+					 
+					 }
+					 
+					 PointsSumPlayer=0;
+					 PointsSumEvil=0;
+					 $("#Roll").show();
+					 $("#Pass").show();
+					 $("#NextRound").hide();
+				     $("#Turn").text("Turn of the "+Name);
+					 $("#PlayerScore").text(Name+" : "+ScorePlayer);
+					 $("#EvilScore").text("The Evil One: "+ScoreEvil);
+					 $("#PlayerPoints").text(Name+" : "+PointsSumPlayer);
+					 $("#EvilPoints").text("The Evil One: "+PointsSumEvil);
+					  
+						 
+						 
+						 
+					 
+					 });
+					 <!-- Win Round -->
+					 function WinRound(){
+					  ScorePlayer=ScorePlayer+1;
+					   $("#PlayerPoints").text(Name+" : Won");
+					    $("#EvilPoints").text("The Evil One: Lost");
+						
+				
+					 $("#PlayerScore").text(Name+" : "+ScorePlayer);
+					 $("#EvilScore").text("The Evil One: "+ScoreEvil);
+					 $("#NextRound").show();
+
+					 }
+	                 <!-- Lost Round -->
+					 function LostRound()
+					 {
+					  	ScoreEvil=ScoreEvil+1;
+						$("#PlayerPoints").text(Name+" : Lost");
+					    $("#EvilPoints").text("The Evil One: Won");
+						
+						
+					 $("#PlayerScore").text(Name+" : "+ScorePlayer);
+					 $("#EvilScore").text("The Evil One: "+ScoreEvil);
+					 $("#NextRound").show();
+	
+					 }
+					 function DrawRound()
+					 {
+						$("#PlayerPoints").text(Name+" : Draw");
+					    $("#EvilPoints").text("The Evil One: Draw");
+						
+						
+					 $("#PlayerScore").text(Name+" : "+ScorePlayer);
+					 $("#EvilScore").text("The Evil One: "+ScoreEvil);
+					 $("#NextRound").show();
+
+					 }
+
+                         <!--Win Game-->
+                          function MakeWish(){
+						  audioAngry.play();
+						  $("#modalWishForm").modal();
+						  
+						  }						  
+function Soul(){
+audioLaugh.play();
+$("#modalSoulForm").modal();
+}
+						 
+					 
+					 
+
+  </script>
+</html>

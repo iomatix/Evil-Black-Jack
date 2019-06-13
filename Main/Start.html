@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+
+
+
+  <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Demonology">
+    <meta name="author" content="MW">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Daemo-Logy</title>
+	
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/_Main.css" rel="stylesheet">
+  </head>
+
+  
+  
+  <!-- body -->
+  
+  <body class="text-center">
+  
+<!--  header --> 
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Daemo-Logy</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="Start.html">Start</a>
+            <a class="nav-link" href="Album.html">Album</a>
+			<a class="nav-link" href="Game.html">Game</a>
+            <a class="nav-link" href="Info.html">Info</a>
+          </nav>
+        </div>
+      </header>
+
+	  <!-- main -->
+      <main role="main" class="inner cover">
+        <p class="lead"><h1 class="cover-heading">Check the <b id="demonstyle"> Demons</b> inside...</h1></p>
+	    <p class="lead">
+		<img src="img/Demon1.jpg"  id="Main-img"  class="img-fluid" alt="Responsive Demon">
+		</p>
+		<p class="lead">
+  <a href="Album.html" class="btn btn-lg btn-secondary" onmouseenter="Launch()" onmouseleave="NLaunch()" >Investigate</a>
+		</p>
+        <p class="lead">Investigate a huge amount of diffrent <b id="demonstyle">mystic spirits</b></p>
+        
+      </main>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p><b id="demonstyle">Demons</b> for <a href="Start.html">Daemo-Logy</a>by 
+		  <a href="https://www.twitch.tv/iomatix">iomatix</a>.</p>
+        </div>
+      </footer>
+    </div>
+
+
+
+
+  </body>
+  
+  
+  
+    <!-- scripts -->
+  <script>
+function Launch(){
+	$('#Main-img').attr('src',"img/Demon0.gif");
+}
+function NLaunch(){
+	 $('#Main-img').attr('src',"img/Demon1.jpg");
+}
+
+
+  </script>
+</html>
